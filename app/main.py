@@ -1,3 +1,6 @@
+from correlation_visualizer import create_correlation_heatmap
+from correlation import calculate_correlations
+from profile import create_profile
 import sys
 from data_loader import load_csv
 from analyzer import analyze_data
@@ -20,12 +23,23 @@ def main():
 
     df = load_csv(file_path)
     report = analyze_data(df)
+
+    correlations = calculate_correlations(df)
+
+    report["correlations"] = correlations
+
+    profile = create_profile(df)
+
+    report["profile"] = profile
+
     insights = generate_insights(report)
 
     report["insights"] = insights
 
     create_sales_distribution(df)
     create_missing_values_chart(df)
+
+    create_correlation_heatmap(df)
 
     print_report(report)
 

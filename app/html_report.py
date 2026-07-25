@@ -123,6 +123,10 @@ def generate_html_report(report):
     <img src="missing_values.png">
 
 
+    <h3>Correlation matrix</h3>
+
+    <img src="correlation_heatmap.png">
+
     </body>
 
     </html>
