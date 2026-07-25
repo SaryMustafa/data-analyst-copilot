@@ -63,6 +63,9 @@ def generate_html_report(report):
     <div class="card">
 
         <h2>🤖 AI Анализ</h2>
+        <p>
+        {report.get("ai_analysis", "")}
+        </p>
 
         <ul>
         {insights_html}

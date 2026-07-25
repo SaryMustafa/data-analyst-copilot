@@ -1,3 +1,4 @@
+from ai_analyzer import generate_ai_analysis
 from correlation_visualizer import create_correlation_heatmap
 from correlation import calculate_correlations
 from profile import create_profile
@@ -35,6 +36,10 @@ def main():
     insights = generate_insights(report)
 
     report["insights"] = insights
+   
+    ai_text = generate_ai_analysis(report)
+
+    report["ai_analysis"] = ai_text
 
     create_sales_distribution(df)
     create_missing_values_chart(df)
