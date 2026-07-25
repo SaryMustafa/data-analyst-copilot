@@ -14,3 +14,15 @@ def test_analyze_data():
     assert report["rows"] == 3
     assert report["columns"] == 2
     assert report["duplicates"] == 0
+
+def test_detect_outliers():
+
+    df = pd.DataFrame({
+        "id": [1, 2, 3, 4, 5],
+        "sales": [100, 200, 300, 400, 99999]
+    })
+
+    report = analyze_data(df)
+
+    assert "sales" in report["outliers"]
+    assert 99999 in report["outliers"]["sales"]

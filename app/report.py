@@ -18,3 +18,11 @@ def print_report(report):
         print(f"\n{column}:")
         for metric, value in stats.items():
             print(f"{metric}: {value:.2f}")
+
+    print("\nOutliers:")
+
+    if report["outliers"]:
+        for column, values in report["outliers"].items():
+            print(f"{column}: {values}")
+    else:
+        print("No outliers found")
