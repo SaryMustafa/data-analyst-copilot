@@ -7,12 +7,16 @@ from visualizer import (
     create_missing_values_chart
 )
 from html_report import generate_html_report
+from insights import generate_insights
 
 def main():
 
     df = load_csv("data/test.csv")
 
     report = analyze_data(df)
+    insights = generate_insights(report)
+
+    report["insights"] = insights
 
     create_sales_distribution(df)
     create_missing_values_chart(df)

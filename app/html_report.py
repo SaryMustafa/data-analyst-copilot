@@ -3,10 +3,17 @@ import json
 
 def generate_html_report(report):
 
+    insights_html = ""
+
+    for insight in report["insights"]:
+        insights_html += f"<li>{insight}</li>"
+
+
     html = f"""
     <html>
 
-    <head>
+    <head> 
+        <meta charset="UTF-8">
         <title>Data Analysis Report</title>
 
         <style>
@@ -50,6 +57,16 @@ def generate_html_report(report):
         <p>
         Columns: {report["columns"]}
         </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🤖 AI Анализ</h2>
+
+        <ul>
+        {insights_html}
+        </ul>
 
     </div>
 
