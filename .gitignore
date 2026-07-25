@@ -19,3 +19,8 @@ __pycache__/
 *.xlsx
 *.parquet
 
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
