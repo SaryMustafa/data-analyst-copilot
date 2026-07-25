@@ -1,12 +1,4 @@
-from data_loader import load_csv
-from analyzer import analyze_data
-
-
-def main():
-    df = load_csv("data/test.csv")
-
-    report = analyze_data(df)
-
+def print_report(report):
     print("DATASET REPORT")
     print("----------------")
 
@@ -20,11 +12,9 @@ def main():
     print("\nDuplicates:")
     print(f"Full duplicates: {report['duplicates']}")
     print(f"Without ID: {report['duplicates_without_id']}")
+
     print("\nNumeric summary:")
     for column, stats in report["numeric_summary"].items():
-    	print(f"\n{column}:")
-    	for metric, value in stats.items():
-        	print(f"{metric}: {value:.2f}")	
-
-if __name__ == "__main__":
-    main()
+        print(f"\n{column}:")
+        for metric, value in stats.items():
+            print(f"{metric}: {value:.2f}")
