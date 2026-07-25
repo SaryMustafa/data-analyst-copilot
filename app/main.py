@@ -1,3 +1,4 @@
+import sys
 from data_loader import load_csv
 from analyzer import analyze_data
 from report import print_report
@@ -11,8 +12,13 @@ from insights import generate_insights
 
 def main():
 
-    df = load_csv("data/test.csv")
+    if len(sys.argv) > 1:
+    	file_path = sys.argv[1]
+    else:
+    	file_path = "data/test.csv"
 
+
+    df = load_csv(file_path)
     report = analyze_data(df)
     insights = generate_insights(report)
 

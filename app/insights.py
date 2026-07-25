@@ -8,8 +8,10 @@ def generate_insights(report):
     for column, value in report["missing_values"].items():
 
         if value > 0:
+
             insights.append(
-                f"В колонке '{column}' обнаружено пропусков: {value}."
+                f"⚠ В колонке '{column}' обнаружено пропусков: {value}. "
+                f"Рекомендация: проверить источник данных или заполнить значения."
             )
 
 
@@ -18,14 +20,16 @@ def generate_insights(report):
     if report["duplicates"] > 0:
 
         insights.append(
-            f"Найдено полных дубликатов строк: {report['duplicates']}."
+            f"⚠ Найдено полных дубликатов: {report['duplicates']}. "
+            f"Рекомендация: удалить повторяющиеся записи."
         )
 
 
     if report["duplicates_without_id"] > 0:
 
         insights.append(
-            "Обнаружены повторяющиеся записи без учета ID."
+            "⚠ Найдены повторяющиеся записи без учета ID. "
+            "Рекомендация: проверить уникальность данных."
         )
 
 
@@ -34,16 +38,15 @@ def generate_insights(report):
     for column, values in report["outliers"].items():
 
         insights.append(
-            f"В колонке '{column}' найдены аномальные значения: {values}."
+            f"⚠ В колонке '{column}' найдены аномальные значения: {values}. "
+            f"Рекомендация: проверить корректность этих записей."
         )
 
-
-    # Если проблем нет
 
     if not insights:
 
         insights.append(
-            "Качество данных хорошее. Существенных проблем не обнаружено."
+            "✅ Качество данных хорошее. Существенных проблем не обнаружено."
         )
 
 
