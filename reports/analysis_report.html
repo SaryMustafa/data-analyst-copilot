@@ -1,0 +1,117 @@
+
+    <html>
+
+    <head>
+        <title>Data Analysis Report</title>
+
+        <style>
+            body {
+                font-family: Arial;
+                margin: 40px;
+            }
+
+            h1 {
+                color: #333;
+            }
+
+            .card {
+                padding: 15px;
+                margin: 10px 0;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+            }
+
+            img {
+                width: 700px;
+            }
+
+        </style>
+
+    </head>
+
+
+    <body>
+
+    <h1>Dataset Analysis Report</h1>
+
+
+    <div class="card">
+        <h2>Dataset overview</h2>
+
+        <p>
+        Rows: 5
+        </p>
+
+        <p>
+        Columns: 5
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Missing values</h2>
+
+        <pre>
+{
+    "id": 0,
+    "name": 0,
+    "age": 1,
+    "city": 0,
+    "sales": 0
+}
+        </pre>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Duplicates</h2>
+
+        <p>
+        Full duplicates:
+        0
+        </p>
+
+        <p>
+        Without ID:
+        0
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Outliers</h2>
+
+        <pre>
+{
+    "sales": [
+        999999
+    ]
+}
+        </pre>
+
+    </div>
+
+
+    <h2>Charts</h2>
+
+
+    <h3>Sales distribution</h3>
+
+    <img src="sales_distribution.png">
+
+
+    <h3>Missing values</h3>
+
+    <img src="missing_values.png">
+
+
+    </body>
+
+    </html>
+    

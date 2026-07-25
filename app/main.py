@@ -2,7 +2,11 @@ from data_loader import load_csv
 from analyzer import analyze_data
 from report import print_report
 from exporter import save_report
-
+from visualizer import (
+    create_sales_distribution,
+    create_missing_values_chart
+)
+from html_report import generate_html_report
 
 def main():
 
@@ -10,9 +14,14 @@ def main():
 
     report = analyze_data(df)
 
+    create_sales_distribution(df)
+    create_missing_values_chart(df)
+
     print_report(report)
 
     save_report(report, "reports/report.json")
+
+    generate_html_report(report)
 
 
 if __name__ == "__main__":
