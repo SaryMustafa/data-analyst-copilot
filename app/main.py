@@ -1,6 +1,6 @@
 from data_loader import load_csv
 from analyzer import analyze_data
-
+from exporter import save_report
 
 def main():
     df = load_csv("data/test.csv")
@@ -24,7 +24,9 @@ def main():
     for column, stats in report["numeric_summary"].items():
     	print(f"\n{column}:")
     	for metric, value in stats.items():
-        	print(f"{metric}: {value:.2f}")	
+        	print(f"{metric}: {value:.2f}")
+
+    save_report(report, "reports/report.json")	
 
 if __name__ == "__main__":
     main()

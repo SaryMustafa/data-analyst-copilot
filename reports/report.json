@@ -1,0 +1,52 @@
+{
+    "rows": 5,
+    "columns": 5,
+    "missing_values": {
+        "id": 0,
+        "name": 0,
+        "age": 1,
+        "city": 0,
+        "sales": 0
+    },
+    "duplicates": 0,
+    "duplicates_without_id": 1,
+    "data_types": {
+        "id": "int64",
+        "name": "str",
+        "age": "float64",
+        "city": "str",
+        "sales": "int64"
+    },
+    "numeric_summary": {
+        "id": {
+            "count": 5.0,
+            "mean": 3.0,
+            "std": 1.5811388300841898,
+            "min": 1.0,
+            "25%": 2.0,
+            "50%": 3.0,
+            "75%": 4.0,
+            "max": 5.0
+        },
+        "age": {
+            "count": 4.0,
+            "mean": 27.25,
+            "std": 2.8722813232690143,
+            "min": 25.0,
+            "25%": 25.0,
+            "50%": 26.5,
+            "75%": 28.75,
+            "max": 31.0
+        },
+        "sales": {
+            "count": 5.0,
+            "mean": 1460.0,
+            "std": 550.4543577809154,
+            "min": 900.0,
+            "25%": 1200.0,
+            "50%": 1200.0,
+            "75%": 1700.0,
+            "max": 2300.0
+        }
+    }
+}
