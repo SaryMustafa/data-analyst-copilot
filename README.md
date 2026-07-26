@@ -67,7 +67,7 @@ data-analyst-copilot/
 │   ├── quality.png
 │   ├── ai.png
 │   ├── charts.png
-│   └── history.png
+│   └── his_v2tory.png
 │
 ├── requirements.txt
 ├── README.md
