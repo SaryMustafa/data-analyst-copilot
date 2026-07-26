@@ -4,6 +4,8 @@
 # Python cache
 __pycache__/
 *.py[cod]
+*.pyc
+.pytest_cache/
 
 # Environment variables
 .env
@@ -14,13 +16,10 @@ __pycache__/
 # OS files
 .DS_Store
 
-# Data files
+# User data
+reports/history/
+
+# Large data files
 *.csv
 *.xlsx
 *.parquet
-
-.venv/
-__pycache__/
-.pytest_cache/
-*.pyc
-

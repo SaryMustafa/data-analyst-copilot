@@ -13,6 +13,7 @@ from visualizer import (
 )
 from html_report import generate_html_report
 from insights import generate_insights
+from quality_score import calculate_quality_score
 
 def main():
 
@@ -36,6 +37,10 @@ def main():
     insights = generate_insights(report)
 
     report["insights"] = insights
+
+    quality_score = calculate_quality_score(report)
+
+    report["quality_score"] = quality_score
    
     ai_text = generate_ai_analysis(report)
 
