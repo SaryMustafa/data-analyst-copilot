@@ -134,7 +134,7 @@ streamlit run app/dashboard.py
 
 ## История анализов
 
-![History](images/history.png)
+![History](images/history_v2.png)
 
 
 ---
