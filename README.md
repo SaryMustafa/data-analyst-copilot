@@ -6,9 +6,9 @@
 
 ---
 
-## 🚀 Возможности
+# 🚀 Возможности
 
-### 📊 Анализ качества данных
+## 📊 Анализ качества данных
 
 - количество строк и колонок
 - пропущенные значения
@@ -16,9 +16,8 @@
 - дубликаты без учета ID
 - расчет Data Quality Score
 
----
 
-### 🔍 Exploratory Data Analysis (EDA)
+## 🔍 Exploratory Data Analysis (EDA)
 
 - статистический анализ
 - профиль колонок
@@ -27,9 +26,8 @@
 - корреляционный анализ
 - построение графиков
 
----
 
-### 🤖 AI-анализ
+## 🤖 AI-анализ
 
 Используется локальная LLM через Ollama:
 
@@ -37,17 +35,17 @@
 - описание проблем в данных
 - генерация рекомендаций
 
----
 
-### 📄 Отчеты
+## 📄 Отчеты
 
 - HTML отчет
 - история анализов
 - просмотр результатов через Streamlit
 
+
 ---
 
-## 📂 Структура проекта
+# 📂 Структура проекта
 
 ```text
 data-analyst-copilot/
@@ -74,3 +72,96 @@ data-analyst-copilot/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
+
+---
+
+# ⚙️ Установка и запуск
+
+## Клонирование проекта
+
+```bash
+git clone https://github.com/SaryMustafa/data-analyst-copilot.git
+```
+
+## Создание виртуального окружения
+
+```bash
+python3 -m venv .venv
+```
+
+## Активация окружения
+
+```bash
+source .venv/bin/activate
+```
+
+## Установка зависимостей
+
+```bash
+pip install -r requirements.txt
+```
+
+## Запуск приложения
+
+```bash
+streamlit run app/dashboard.py
+```
+
+---
+
+# 📸 Интерфейс
+
+## Главная страница
+
+![Main](images/main.png)
+
+
+## Проверка качества данных
+
+![Quality](images/quality.png)
+
+
+## AI-анализ
+
+![AI](images/ai.png)
+
+
+## Автоматические графики
+
+![Charts](images/charts.png)
+
+
+## История анализов
+
+![History](images/history.png)
+
+
+---
+
+# 🛠 Использованные технологии
+
+- Python 3.11
+- Pandas
+- Streamlit
+- Matplotlib
+- Seaborn
+- Ollama (Llama)
+- JSON
+- HTML Reports
+
+
+---
+
+# 🎯 Цель проекта
+
+Создание инструмента для автоматизации первичного анализа данных.
+
+Проект демонстрирует навыки:
+
+- Data Quality Analysis
+- Exploratory Data Analysis
+- автоматизация аналитических процессов
+- визуализация данных
+- применение LLM в аналитике
+- разработка аналитических инструментов
