@@ -23,3 +23,7 @@ reports/history/
 *.csv
 *.xlsx
 *.parquet
+
+# Generated reports
+reports/*.html
+reports/*.json
